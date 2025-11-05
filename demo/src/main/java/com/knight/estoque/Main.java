@@ -1,9 +1,21 @@
 package com.knight.estoque;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Oi, mundo!");
+        // Inicia a fábrica dos proxies
+        ListagemLivrosService listagemLivrosFactory = new ListagemLivrosService();
+
+        // Obtém um proxy
+        ListagemLivros listagemLivros = listagemLivrosFactory.getListagemLivrosPort();
+        
+        // Executa o método remoto
+        List<Livro> livros = listagemLivros.listarLivros();
+        for (Livro livro : livros) {
+            System.out.println("Nome: " + livro.getNome());
+        }
 
     }
 }

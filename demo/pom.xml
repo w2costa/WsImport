@@ -40,7 +40,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <packageName>com.knight.estoque</packageName>
+                    <packageName>com.knight.estoque</packageName> <!-- mudar isso -->
                     <wsdlUrls>
                         <wsdlUrl>http://localhost:8080/livros?wsdl</wsdlUrl> <!--Sure
                         enough, you change this with the real URL-->
